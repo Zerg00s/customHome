@@ -156,7 +156,7 @@ ng-include{
 
 
 /*Quick Links. Home page*/  
-.police-links{
+.sample-links{
     list-style: none;
     font-size:15px;
     color:black;
@@ -174,7 +174,7 @@ ng-include{
 }
 
 @media (min-width:992px) and (max-width:1308px){
-    .police-links{
+    .sample-links{
         padding-left:10px;
         width:45%;
         font-size: 12px
@@ -187,27 +187,27 @@ ng-include{
     }
 }
 
-.police-links a{
+.sample-links a{
     color:black;
     display:inline-block;
     width:100%;
     transition: all 0.3s;
 }
 
-.police-links a:hover{
+.sample-links a:hover{
     background-color: #DDD;
     border-radius: 4px;
     transition: all 0.3s;
 }
 
-.police-links .fa{
+.sample-links .fa{
     margin-right: 7px;
     font-size: 22px;
     transition: all 0.5s;
     line-height: 32px;
 }
 
-.police-links a{
+.sample-links a{
     cursor: pointer;
 }
 
@@ -305,7 +305,7 @@ ng-include{
 }
 
 
-/*DURHAM PAGE LAYOUT STYLES BEGIN*/
+/* PAGE LAYOUT STYLES BEGIN*/
 .captioned-image{
     float:right;
     padding-right: 60px;
@@ -358,7 +358,7 @@ ul.dfwp-list >li{
 .unit-page-content{
     margin:0px;
 }
-/*DURHAM PAGE LAYOUT STYLES END*/
+/* PAGE LAYOUT STYLES END*/
 
 
 .select-division{

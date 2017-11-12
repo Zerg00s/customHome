@@ -17,7 +17,20 @@ function UploadFolder ([string]$sourceFolderPath,[string]$destinationFolder){
     }
 }
 
-$destFolder = "_catalogs/masterpage"
+# get destination folder URL from app.json:
+$destFolder = (Get-Content -Path "..\config\app.json" -Raw | ConvertFrom-Json).spFolder
+
+# $folder -eq $null
+# while ($folder -eq $null) {
+#     try{
+#         $folder = Ensure-PnPFolder -SiteRelativePath $destFolder
+#     }
+#     catch{
+#         $isError = $true
+#     }
+#     $isError = $false
+# }
+
 Write-Host $destFolder -ForegroundColor DarkMagenta
 
 $loc = Get-Location

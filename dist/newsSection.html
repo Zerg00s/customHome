@@ -1,0 +1,108 @@
+﻿<style>
+    [ng-cloak] {
+        display: none !important;
+    }
+    
+    .news-item {
+        background-color: white;
+    }
+    
+    .news-title {
+        padding: 15px 0px;
+        font-weight: bold;
+    }
+    
+    .news-panel .panel-heading a {
+        color: white;
+    }
+    
+
+    .news-body img{
+        width: 100% !important;
+    }
+    
+    .button-positive {
+        background-color: #204d74;
+        color:white;
+    }
+    
+    .news-filters {
+        padding-bottom: 20px;
+    }
+    .news-topic-item{
+        cursor: pointer;
+    }
+
+    .news-topic a{
+        margin-bottom: 3px;
+    }
+
+    .news-item{
+        background-color: white
+    }
+    /*NEWS ANIMATIONS BEGIN*/
+    
+    .news-item.ng-enter {
+        animation: fly 0.3s;
+    }
+    
+    .ng-enter-stagger,
+    .ng-leave-stagger {
+        transition-delay: 0.1s;
+        transition-duration: 0;
+        animation-delay: 0.1s;
+        animation-duration: 0;
+    }
+    
+    
+    @keyframes fly {
+        0% {
+            transform: translate3d(-100%,0,0);
+            opacity: 0;
+        }
+        90% {
+            transform: translate3d(2%,0,0);
+            opacity: 0.95;
+        }
+        100% {
+            transform: translate3d(0%,0,200%);
+            opacity: 1;
+        }
+    }
+    /*NEWS ANIMATIONS END*/
+</style> 
+
+<div ng-controller="WhatIsNewController as vm" > 
+    <div class="panel panel-primary news-panel">
+        <div class="panel-heading">
+            <i class="fa fa-newspaper-o" aria-hidden="true" style="padding-right: 6px"></i> <a href="../Lists/News">What's new</a>
+        </div>
+        <div class="panel-body">
+            <div class="news-filters">
+                <span class="news-topic " ng-repeat="topic in vm.topics" ng-cloak>
+                    <a class="btn btn-primary" ng-class="{'button-positive': vm.isActive(topic)}" ng-click="vm.setActive(topic)">{{topic}}</a>
+                </span>
+            </div>
+            <div ng-repeat="newsItem in vm.news" class="well well-lg news-item" ng-cloak>
+                <div class="news-date">{{newsItem.Created | date:'EEEE MMM dd HH:mm:ss'}}
+                    <span class="news-topic-item" ng-click="vm.setActive(newsItem.Topic)"><strong> {{newsItem.Topic}}</strong></span>
+                </div>
+                <div class="news-title">
+                    <a ng-href="{{'/Lists/Whats New with Approval Workflow/DispForm.aspx?ID='+newsItem.ID + '&Source=%2F'}}">{{newsItem.Title | cut:true:70:' ...'}}</a>
+                </div>
+                <!--<div class="news-body">{{newsItem.Body | cut:true:380:' ...'}}</div>-->
+                <div class="news-body" ng-bind-html="newsItem.Body"></div>
+            </div>
+
+            <div ng-if="!vm.news" class="well">Select one of the topics above</div>
+
+            <div class='news-add-item'>
+                <a href='/Lists/Whats%20New%20with%20Approval%20Workflow/NewForm.aspx?Source=%2F'>Create new post</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,446 @@
+﻿<style>
+    [ng-cloak] {
+        display: none !important;
+    }
+
+    #pageTitle {
+        display: none;
+    }
+    
+    .main-top {
+        margin-top: -20px;
+        background-color: #5EA4F9;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .main-top-links-photo-col,
+    .main-title-wrap {
+        float: left;
+    }
+    
+    .main-top-links-photo-col {
+        width: 300px;
+    }
+    
+    .main-top-links-caption-col {
+        margin-left: 300px;
+    }
+    
+    .main-title-wrap {
+        width: 50%;
+    }
+    
+    .main-top-links-col {
+        float: right;
+        margin: 10px;
+        height: 180px;
+        width: 45%;
+    }
+    
+    .main-top-links-col a {
+        background: #79B5FB;
+        border: none;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        transition: all 0.3s;
+        padding: 15px;
+    }
+    
+    .main-top-links-col a:hover {
+        background: #5395E3
+    }
+    
+    .main-top-links-col a {
+        color: white;
+    }
+    
+    .photoTitle {
+        margin: 15px 10px 10px 15px;
+        background: #5394E4;
+        padding: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 4px;
+    }
+    
+    .photoCaption {
+        color: white;
+        padding: 10px 10px 10px 20px;
+        line-height: 24px;
+    }
+    
+    .main-top-photoCaption-link {
+        color: #249;
+        cursor: pointer;
+    }
+    .main-top-photoCaption-link:hover{
+        text-decoration: underline;
+    }
+    
+    .main-top-links-photo {
+        box-shadow: 1px 1px 1px #DDD;
+    }
+    
+    .link-square {
+        text-align: center;
+        background-color: #79B5FB;
+        /*padding: 7px;
+        height: 30px;
+        width: 22%;
+        margin-top: 0;
+        margin-right: 15px;
+        margin-bottom: 15px;*/
+        border-radius: 3px;
+        transition: all 0.3s;
+        display: block;
+    }
+    
+    .link-square:hover {
+        background: #5394E4;
+    }
+</style>
+
+
+<div class="main-top" ng-cloak ng-controller="homeController as home">
+    <div>
+        <div class='main-title-wrap'>
+            <div class="main-top-links-photo-col">
+                <img class='main-top-links-photo' ng-src="{{home.imgUrl}}" width="300" height="200" alt="">
+            </div>
+
+            <div class="main-top-links-caption-col">
+                <div class="photoTitle">Snapshot</div>
+                <div class="photoCaption">{{home.shortText}}
+                    <span class='main-top-photoCaption-link' href='#' ng-click='home.openModal()'>Read more</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-top-links-col">
+            <div class="col-xs-6"><a class="link-square" href='https://www.google.ca'>Phone book</a></div>
+            <div class="col-xs-6"><a class="link-square" href='https://www.google.ca'>PeopleSoft</a></div>
+            <div class="col-xs-6"><a class="link-square" href='https://www.google.ca'>E-Forms</a></div>
+            <div class="col-xs-6"><a class="link-square" href='/SitePages/Crown%20Corner.aspx'>Crown Corner</a></div>
+            <div class="col-xs-6"><a class="link-square" href='https://www.google.ca'>GOOGLE.CA</a></div>
+            <div class="col-xs-6"><a class="link-square" href='/HealthWellnessSafety'>Health and Wellness</a></div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="main-content container-full" style="display: table-cell;">
+    <ng-include class="slide-animate col-sm-12 col-md-12" src="'../_catalogs/masterpage/homeTabs.html'" style="background:rgba(216,216,216,0.5)"></ng-include>
+    <ng-include class="slide-animate col-sm-12 col-md-6"  src="'../_catalogs/masterpage/newsSection.html'" style="margin-top: 15px;"></ng-include>
+    <ng-include class="slide-animate col-sm-12 col-md-6"  src="'../_catalogs/masterpage/officeChief.html'" style="margin-top: 15px;"></ng-include>
+    <ng-include class="slide-animate col-sm-12 col-md-6"  src="'../_catalogs/masterpage/newsRoom.html'"></ng-include>
+    <div class="slide-animate col-sm-12 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <i class="fa fa-twitter" aria-hidden="true" style="padding-right: 6px"></i> Twitter feed</div>
+            <div class="panel-body">
+                <div class="well">
+                    <a class="twitter-timeline" href="https://twitter.com/TwitterDev" >Tweets by @TwitterDev</a>
+                    <script>
+                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+                    </script>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <ng-include class="slide-animate col-sm-12 col-md-6" src="'../_catalogs/masterpage/enforcement.html'"></ng-include>
+    <ng-include class="slide-animate col-sm-12 col-md-6" src="'../_catalogs/masterpage/officerSafety.html'"></ng-include>
+</div>
+
+<!--TODO: move angular to the master page (use Custom action)-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>-->
+<script>
+    angular.module('app').controller('WhatIsNewController', WhatIsNewController);
+
+    function WhatIsNewController($http, $sce) {
+        var vm = this;
+        vm.topics = ['Priority One', 'Operational Updates', 'Social Calendar', 'ALL', 'Clear'];
+        // vm.selectedTopic = 'ALL';
+        vm.setActive = function (topic) {
+            vm.selectedTopic = topic;
+            vm.getNews(topic);
+        };
+        vm.isActive = function (topic) {
+            return topic === vm.selectedTopic;
+        };
+
+        vm.getNews = function (topic) {
+            var filter = "&$filter=Topic eq '" + topic + "'";
+            if (topic === "ALL") {
+                filter = '';
+            }
+            else if (topic === "Clear") {
+                vm.news = null;
+                return;
+            }
+
+            var url = _spPageContextInfo.webServerRelativeUrl+ "/_api/web/lists/getByTitle('News')/items?$select=Created,Title,Body,Topic,ID" + filter + "&$orderby=Created desc&$top=10";
+
+            $http({
+                url: url,
+                method: "GET",
+                headers: [
+                    Accept = "application/json;odata=verbose"
+                ]
+            })
+                .then(function (results) {
+                    vm.news = results.data.value;
+                    results.data.value.forEach(function (item) {
+                        item.Body = $sce.trustAsHtml(item.Body)
+                        item.Created = new Date(item.Created);
+                    });
+                });
+        }
+    }
+
+
+    angular.module('app').controller('NewsRoomController', NewsRoomController);
+    function NewsRoomController($http, $sce, $scope, $log) {
+        var vm = this;
+
+        vm.open1 = function() {
+            vm.popup1.opened = true;
+        };
+        vm.open2 = function() {
+            vm.popup2.opened = true;
+        };
+
+        vm.popup1 = { opened: false };
+        vm.popup2 = { opened: false };
+
+        vm.format = 'MM/dd/yyyy';
+        
+        vm.dateOptions = {
+            formatYear: 'yy',
+            minDate: new Date(2008, 1, 1),
+            maxDate: new Date(2020, 5, 22),            
+            startingDay: 1 
+        };
+
+        vm.topics = ['Our Media Releases', 'News Coverage', 'OACP News', 'National News'];
+        // vm.selectedTopic = 'ALL';
+        vm.setActive = function (topic) {
+            vm.selectedTopic = topic;
+            vm.getNews(vm.selectedTopic);
+        };
+        vm.isActive = function (topic) {
+            return topic === vm.selectedTopic;
+        };
+        vm.dateChanged = function (nweValue) {
+            if(angular.isUndefined(vm.selectedTopic) == false){
+                vm.getNews(vm.selectedTopic);
+            }
+            else{
+                if(angular.isUndefined(nweValue)==false){
+                    $log.debug(nweValue);
+                    vm.selectedTopic = "ALL";
+                    vm.getNews("ALL");
+
+                }
+                
+               
+            }
+        }
+
+        $scope.$watch((function(){
+            return vm.dateFrom;
+        }).bind(this), vm.dateChanged);
+
+        $scope.$watch((function(){
+            return vm.dateTo;
+        }).bind(this), vm.dateChanged);
+
+
+        vm.getNews = function (topic) {
+
+            var dateFilter = '';
+            if (vm.dateFrom){
+                var dateFromFilter = "(Created ge datetime'" + vm.dateFrom.toISOString() +"')";
+                dateFilter = dateFromFilter;
+
+            }
+            if (vm.dateTo){
+                 var dateToFilter = "(Created le datetime'" + vm.dateTo.toISOString()+"')";
+                 if(dateFilter){
+                    dateFilter += " and " + dateToFilter
+                 }
+                 else{
+                    dateFilter = dateToFilter;
+                 }
+            }
+             var filter = "&$filter=(Topic eq '" + topic + "')";
+
+            if (dateFilter != ''){
+                filter = filter + " and " + dateFilter;
+            }
+
+            if (topic === "ALL") {
+                if(dateFilter != ''){
+                    filter = '&$filter=' + dateFilter;
+                }
+                else{
+                     filter = '';
+                }
+            }
+            else if (topic === "Clear") {
+                vm.news = null;
+                return;
+            }
+
+            var url = _spPageContextInfo.webServerRelativeUrl+ "/_api/web/lists/getByTitle('NewsRoom')/items?$select=Created,Title,Body,Topic,ID" + filter + "&$orderby=Created desc&$top=10";
+            //console.log(url); - NEVER USE console.log('') in the IE
+
+            $http({
+                url: url,
+                method: "GET",
+                headers: [
+                    Accept = "application/json;odata=verbose"
+                ]
+            })
+                .then(function (results) {
+                    vm.news = results.data.value;
+                    results.data.value.forEach(function (item) {
+                        item.Body = $sce.trustAsHtml(item.Body)
+                        item.Created = new Date(item.Created);
+                    });
+                });
+        }
+
+        
+    }
+
+
+    angular.module('app').controller('officeChiefController', officeChiefController);
+    function officeChiefController($http) {
+        var vm = this;
+        vm.message = 'test';
+
+        $http({
+            url:_spPageContextInfo.webServerRelativeUrl+ "/_api/web/lists/getByTitle('Announcements')/items?$orderby=Created desc&$top=1",
+            method:"GET",
+            headers: {
+                Accept:'application/json;odata=verbose'
+            }
+        })
+        .then(function(results){
+            vm.message = results.data.d.results[0].Title;
+            vm.lastId = results.data.d.results[0].ID
+        });
+    }
+
+
+
+    angular.module('app')
+        .filter('htmlToPlaintext', function () {
+            return function (text) {
+                return text ? String(text).replace(/<[^>]+>/gm, '') : '';
+            };
+        }
+        );
+
+    angular.module('app').filter('cut', function () {
+        return function (value, wordwise, max, tail) {
+            if (!value) return '';
+            max = parseInt(max, 10);
+            if (!max) return value;
+            if (value.length <= max) return value;
+            value = value.substr(0, max);
+            if (wordwise) {
+                var lastspace = value.lastIndexOf(' ');
+                if (lastspace != -1) {
+                    if (value.charAt(lastspace - 1) == '.' || value.charAt(lastspace - 1) == ',') {
+                        lastspace = lastspace - 1;
+                    }
+                    value = value.substr(0, lastspace);
+                }
+            }
+            return value + (tail || ' …');
+        };
+    });
+
+</script>
+
+
+<script>
+    angular.module('app').controller('homeController', homeController);
+
+    homeController.$inject = ['$http','$uibModal','$sce'];
+    function homeController($http, $uibModal, $sce){
+        var vm = this;
+        vm.openModal = function(){
+            vm.modalInstance = $uibModal.open({
+                // backdrop:'static',
+                controllerAs: 'modal',
+                bindToController: true,
+                windowClass: "modal fade in",
+                controller: function($uibModalInstance, $http,newsItem){
+                        var $ctrl = this;
+                        $ctrl.newsItem = newsItem;
+                        $ctrl.$onInit = function () {
+                            $http({
+                                url:_spPageContextInfo.webServerRelativeUrl+ "/_api/web/lists/getByTitle('BannerItem')/effectiveBasePermissions",
+                                method:'GET',
+                                headers:{
+                                    Accept: "application/json;odata=verbose"
+                                }
+                            })
+                            .then(function(results){
+                                var manageListsPerms = new SP.BasePermissions();
+                                manageListsPerms.initPropertiesFromJson(results.data.d.EffectiveBasePermissions);
+                                var manageLists = manageListsPerms.has(SP.PermissionKind.manageLists);
+                                $ctrl.canEditNews = manageLists;
+                            });                      
+                        };
+
+                        $ctrl.ok = function () { 
+                            this.$close();
+                        };
+
+                        $ctrl.cancel = function () {
+                            this.$dismiss();
+                        };
+                },
+                resolve: {
+                    newsItem: function(){
+                        return vm.newsItem;
+                    }
+                },
+                templateUrl: _spPageContextInfo.webServerRelativeUrl+ '/_catalogs/masterpage/modalView.html'
+            });
+
+            vm.modalInstance.result.then(function (selectedItem) {
+            $ctrl.selected = selectedItem;
+            }, function () {
+           
+            }); 
+        }
+        $http(
+            {
+                url:_spPageContextInfo.webServerRelativeUrl+ "/_api/web/lists/getByTitle('BannerItem')/Items?$select=Id,Title,ShortText,DetailedText,Picture",
+                method:'GET',
+                headers:{
+                    Accept:'application/json;odata=verbose'
+                }
+            }
+        )
+        .then(function(results){
+            vm.newsItem = results.data.d.results[0];
+            vm.imgUrl =  vm.newsItem.Picture.Url;
+            vm.shortText = vm.newsItem.ShortText;
+            vm.newsItem.DetailedText = $sce.trustAsHtml(vm.newsItem.DetailedText);
+        });
+    } 
+
+</script>

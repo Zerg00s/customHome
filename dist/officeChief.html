@@ -1,0 +1,27 @@
+﻿ <div class="panel panel-primary middle-section anchor-plain" ng-controller="officeChiefController as office">
+    <div class="panel-heading">
+        <i class="fa fa-fax" aria-hidden="true" style="padding-right: 6px"></i>
+        <a href="/Lists/Announcements" style="color:white">Office of the CEO</a>
+    </div>
+    <div class="panel-body">
+        <img src="../_catalogs/masterpage/IMG/business.jpg" height="146px" width="110" style="float:right" alt="">
+        <ul class="police-links" style="float:left">
+            <li>
+                <a ng-href="{{'/Lists/Announcements/DispForm.aspx?ID=' + office.lastId+'&Source=%2F'}}">
+                    <i class="fa fa-fw fa-envelope"></i>Notifications ({{office.message}})</a>
+            </li>
+            <li>
+                <a href="/Routine%20Orders">
+                    <i class="fa fa-fw fa-calendar"></i>Routine Orders</a>
+            </li> 
+            <li>
+                <a href="">
+                    <i class="fa fa-fw fa-book"></i>DEMO 1200 Strong</a>
+            </li> 
+            <li>
+                <a target="_blank" href="https://google.com">
+                    <i class="fa fa-fw fa-calendar-o"></i>Business Plan</a>
+            </li> 
+        </ul>
+    </div>
+</div> 

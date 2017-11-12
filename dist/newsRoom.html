@@ -1,0 +1,88 @@
+﻿<style>
+    .media-panel {
+        min-height: 697px;
+        position: relative;
+    }
+    
+    .media-panel .news-add-item {
+        position: absolute;
+        bottom: 14px;
+    }
+    
+    .news-room-panel .panel-body .news-filters .btn {
+        width: 180px;
+    }
+
+    .filter-hint{
+        margin-bottom: 15px;
+        transform: all .5s;
+    }
+
+    .filter-hint.bold{
+        font-weight: bold;
+    }
+</style>
+<div ng-controller="NewsRoomController as vm">
+    <div class="panel panel-primary news-panel media-panel news-room-panel">
+        <div class="panel-heading">
+            <i class="fa fa-newspaper-o" aria-hidden="true" style="padding-right: 6px"></i> <a href="../Lists/NewsRoom">News Room</a>            
+        </div>
+        <div class="panel-body">            
+            <p>
+                If your investigation would benefit from a well-written media release, please send a request to <a href='mailto:media@demo.ca'>media@demo.ca</a>. We will develop
+                a draft and send it back to you for final changes, before it is released. If you need media assistance after
+                hours, please call the Media Relations Officers’ cell phone at <a href='tel:777-222-6622'>777-222-6622'</a>. This is a private number and
+                should NOT be given to any member of the media.
+            </p>
+
+            <div class="news-filters">
+                <span class="news-topic " ng-repeat="topic in vm.topics" ng-cloak>
+                    <a class="btn btn-primary" ng-class="{'button-positive': vm.isActive(topic)}" ng-click="vm.setActive(topic)">{{topic}}</a>
+                </span>
+                <span class="news-topic" ng-cloak>
+                    <a class="btn btn-default" ng-class="{'button-positive': vm.isActive('ALL')}" ng-click="vm.setActive('ALL')">ALL</a>
+                </span>
+                <span class="news-topic" ng-cloak>
+                    <a class="btn btn-warning" ng-click="vm.setActive('Clear')">Clear</a>
+                </span>
+            </div>
+            <div class="form-horizontal date-filters" style="margin-bottom: 20px">
+               <div class="filter-hint">
+                    Select the news coverage you want to see, then filter it by date, if you want to. This will reduce the number of hits to review.
+               </div>
+                <div class="col-md-6">From</div>
+                <div class="col-md-6" style="padding-left: 10px">To</div>
+                <div class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.dateFrom" is-open="vm.popup1.opened" datepicker-options="vm.dateOptions" close-text="Close" />
+                    <span class="input-group-btn" style="padding-right: 20px">
+                        <button type="button" style="height:34px;" class="btn btn-default" ng-click="vm.open1()">
+                        <i class="fa fa-calendar"></i></button> <b><- button not working</b>
+                    </span>
+
+                    <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.dateTo" is-open="vm.popup2.opened" datepicker-options="vm.dateOptions" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" style="height:34px;" class="btn btn-default" ng-click="vm.open2()">
+                        <i class="fa fa-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            
+            <div ng-repeat="newsItem in vm.news" class="well well-lg news-item" ng-cloak>
+                <div class="news-date">{{newsItem.Created | date:'EEEE MMM dd HH:mm:ss'}}
+                    <span class="news-topic-item" ng-click="vm.setActive(newsItem.Topic)"><strong> {{newsItem.Topic}}</strong></span>
+                </div>
+                <div class="news-title">
+                    <a ng-href="{{'/Lists/NewsRoom/DispForm.aspx?ID='+newsItem.ID + '&Source=%2F'}}">{{newsItem.Title | cut:true:70:' ...'}}</a>
+                </div>
+                <!--<div class="news-body">{{newsItem.Body | cut:true:380:' ...'}}</div>-->
+                <!--<div class="news-body" ng-bind-html="newsItem.Body"></div>-->
+            </div>
+
+            <div ng-if="!(vm.news)" class="well">Select one of the topics above</div>
+
+            <div class='news-add-item'>
+                <a href='/Lists/NewsRoom/NewForm.aspx?Source=%2F'>Create new post</a>
+            </div>
+        </div>
+    </div>
+</div>

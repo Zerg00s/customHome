@@ -1,0 +1,750 @@
+/*FAVORITES*/
+.fav-list{
+    position: absolute;
+    background: white;
+    border: #bbb 1px solid;
+    padding: 10px;
+    z-index: 1;
+    margin-top: 3px;
+    top: 37px;
+    margin-left: -128px;
+    min-width: 300px;
+}
+
+.fav-list a{
+    font-size: 16px;
+    transition: all 0.3s;
+    padding:6px;
+}
+.fav-list a:hover{
+    background: #5EA4F9;
+    border-radius: 4px;
+    color:white;
+    text-decoration: none;
+}
+
+.fav-list .fa-trash{
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#toast-container {
+    width: 300px;
+    margin-top: 40px;
+    margin-right: 420px;
+}
+
+#DeltaWebPartAdderUpdatePanelContainer{
+    z-index: 1;
+}
+#s4-ribbonrow *,
+#s4-ribbonrow *:before,
+#s4-ribbonrow *:after,
+.ms-dialog *,
+.ms-dialog *:before,
+.ms-dialog *:after,
+#idStorefrontLayoutRoot *,
+#idStorefrontLayoutRoot *:before,
+#idStorefrontLayoutRoot *:after,
+.ms-dialog #s4-workspace *,
+.ms-dialog #s4-workspace *:before,
+.ms-dialog #s4-workspace *:after,
+.ms-dlgTitle *,
+.ms-dlgTitle *:before,
+.ms-dlgTitle *:after,
+.ms-srch-result-groups *,
+.ms-srch-result-groups *:before,
+.ms-srch-result-groups *:after,
+#Paging *,
+#Paging *:before,
+#Paging *:after,
+#Hero-WPQ2 *,
+#Hero-WPQ2 *:before,
+#Hero-WPQ2 *:after
+{
+  -webkit-box-sizing: initial !important;
+  -moz-box-sizing: initial !important;
+  box-sizing: content-box !important;
+}
+
+.ms-srch-result-groups .ms-srch-ellipsis{
+    display: inline;
+    font-size: 22px;
+}
+
+.ms-dialog  #contentBox{
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+.no-events{
+    pointer-events: none !important;
+} 
+
+ng-include{
+    /* margin-top:0 !important; */
+}
+
+#suiteBarTop{
+    /* display: none; */
+}
+.panel-body{
+    padding:15px !important;
+}
+.ms-siteicon-img{
+    position: relative;
+    margin-top:2px;
+    /* height: 140px; */
+    top: 3px; 
+    left: 7px;
+    max-height: none;
+    padding:1px 20px 8px 20px;
+    background-color:rgba(255,255,255,1);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#settings-slider{
+    font-size: 18px;
+    padding-top: 5px;
+    position: relative;
+    top:5px;
+    padding-right: 10px;
+    color: #444;
+    cursor: pointer;
+}
+
+.news-archive-link{
+    font-size: 22px;
+}
+.news-archive-link .fa{
+    padding-right: 10px;
+    color:black;
+}
+
+.dropdown-menu table {
+  height: 100px !important;
+  width: 150px!important;
+}
+.form-horizontal .col-md-6{
+    padding-left:0;
+}
+
+/*
+.ms-siteicon-a:hover .ms-siteicon-img{
+    background-color:rgba(83,148,228,0.7);
+    transition: all 0.3s;
+}
+*/
+#sideNavBox{
+    width:205px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+#contentBox{
+    margin-left: 240px;
+}
+
+.menu-item-text{
+    color:black !important;
+} 
+
+.js-callout-body{
+    text-shadow: initial;
+}
+
+
+/*Quick Links. Home page*/  
+.police-links{
+    list-style: none;
+    font-size:15px;
+    color:black;
+    margin-left: 10px;
+}
+
+#twitter-widget-0{
+    height: 580px !important;
+    width: 100% !important;
+    max-width: 430px !important;
+    padding:40px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block !important;
+}
+
+@media (min-width:992px) and (max-width:1308px){
+    .police-links{
+        padding-left:10px;
+        width:45%;
+        font-size: 12px
+    }
+
+}
+@media (min-width:992px) and (max-width:1436px){
+    .middle-section .panel-body.panel-body {
+        height: 215px;
+    }
+}
+
+.police-links a{
+    color:black;
+    display:inline-block;
+    width:100%;
+    transition: all 0.3s;
+}
+
+.police-links a:hover{
+    background-color: #DDD;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.police-links .fa{
+    margin-right: 7px;
+    font-size: 22px;
+    transition: all 0.5s;
+    line-height: 32px;
+}
+
+.police-links a{
+    cursor: pointer;
+}
+
+
+/* Left navigation animation BEGIN */
+#sideNavBox li.static{
+    position: relative;
+}
+
+#sideNavBox li.static>ul{
+    position: absolute;
+    left:225px;
+    top:0;
+    width:300px;
+    z-index: 100;
+    background-color:white;
+    border: 1px solid;
+}
+#sideNavBox li.static>ul{
+    opacity: 0;
+    visibility: hidden;
+
+}
+#sideNavBox li.static:hover>ul{
+    transition: opacity 300ms ease-out;
+    opacity:1;
+    visibility: visible;
+}
+#sideNavBox li.static:hover>ul li.static{
+    border: none;
+}
+
+#sideNavBox li.static{
+    border-bottom:1px solid #F6F6F6;
+}
+
+#sideNavBox .ms-core-listMenu-selected:link, 
+#sideNavBox .ms-core-listMenu-selected:visited, 
+#sideNavBox .ms-core-listMenu-selected{
+    box-shadow: 1px 1px 1px;
+    background: #337ab7;
+}
+
+#sideNavBox .ms-core-listMenu-selected .menu-item-text{
+    color:white !important;
+}
+
+
+#sideNavBox li.static.ms-navedit-editArea{
+    border:none;
+}
+
+.ms-core-listMenu-verticalBox .dynamic-children.additional-background{
+    background-image: none !important;
+}
+ 
+
+.ms-navedit-flyoutArrow.dynamic-children:after{
+    pointer-events: none !important;
+    font-family: FontAwesome;
+    content:'\f054';
+    font-size: 11px;
+    float:right;
+    position: relative;
+    margin-left: -11px;
+    top: 6px;
+    right: -10px;
+}
+/* Left navigation animation END */
+
+
+
+.middle-section .panel-body{
+    height: 178px;
+}
+.middle-section img{
+    box-shadow: 1px 1px 1px;
+    border-radius: 3px;
+}
+
+.summaryLinks .panel-body{
+    min-height: 232px;
+}
+
+
+.anchor-plain a,
+.anchor-plain a:hover,
+.anchor-plain a:visited,
+.anchor-plain a:link{
+    text-decoration: none;
+}
+
+.main-content{
+    background: #D8D8D8;
+}
+
+
+/*DURHAM PAGE LAYOUT STYLES BEGIN*/
+.captioned-image{
+    float:right;
+    padding-right: 60px;
+    margin:10px 0 20px 20px;
+}
+.captioned-image img{
+    box-shadow: 3px 3px 3px;
+}
+
+.caption{
+    text-align: center;
+}
+
+.unit-summary-links .dfwp-list{
+    min-height: 70px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+ul.dfwp-list >li{
+    float:left;
+}
+
+.unit-summary-links{
+    width:100%;
+    display: inline-block;
+    padding-right: 60px;
+}
+.unit-summary-links>div>div{
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.unit-summary-links .dfwp-list .link-item:before{
+    font-family: FontAwesome;
+    content:'\f02d';
+    font-size: 15px;
+    margin-right: 6px;
+}
+
+.unit-summary-links .dfwp-list .link-item{
+    margin-right: 15px;
+}
+
+.unit-page-content{
+    margin:0px;
+}
+/*DURHAM PAGE LAYOUT STYLES END*/
+
+
+.select-division{
+    margin-top:20px;
+    font-size: 15px;
+    padding:7px;
+    width:100%;
+}
+
+.select-division>option{
+    padding:7px;
+    background-color:white;
+    color:black;
+}
+
+.select-division-button{
+    width:100%;
+    margin-top:6px;
+}
+
+
+/*BACKGROUND: BEGIN */
+#s4-workspace {
+   position: relative;
+}
+
+#s4-workspace:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 104px;
+    background-size: 34%;
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    z-index: -1;
+}
+/*BACKGROUND: END */
+
+
+/***** NEW MASTER PAGE STYLES BEGIN*/
+.ribbon-topmost{
+    width:100%;
+    background-color:#333;
+    height: 44px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-right: 10px;
+}
+.ribbon-middle{
+    border-top:#9DB9CF 1px solid;
+    border-bottom: #9DB9CF 1px solid;
+    width:100%;
+    background-color:#608DAE;
+    height: 70px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5394e4+0,337ab7+76,337ab7+94,337ab7+100 */
+    background: #5394e4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5394e4 0%, #337ab7 76%, #337ab7 94%, #337ab7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #5394e4 0%,#337ab7 76%,#337ab7 94%,#337ab7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #5394e4 0%,#337ab7 76%,#337ab7 94%,#337ab7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5394e4', endColorstr='#337ab7',GradientType=0 ); /* IE6-9 */
+}
+
+.ribbon-search-area{
+    float:right;
+    
+}
+#SearchBox{
+    background-color: white !important;
+}
+
+#searchInputBox{
+    text-align: center;
+}
+#searchInputBox>div{
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.ribbon-bottom{
+    width:100%;
+    background-color:#E0E1E2;
+    height: 40px; 
+    font-size: 16px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dee5f2+0,dcdcdc+50,dcdcdc+59,cfd0d2+100 */
+    background: #dee5f2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dee5f2 0%, #dcdcdc 50%, #dcdcdc 59%, #cfd0d2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #dee5f2 0%,#dcdcdc 50%,#dcdcdc 59%,#cfd0d2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #dee5f2 0%,#dcdcdc 50%,#dcdcdc 59%,#cfd0d2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee5f2', endColorstr='#cfd0d2',GradientType=0 ); /* IE6-9 */
+    padding-left: 130px;
+}
+
+#pageTitle{
+    margin-top: 0;
+    color: white;
+    text-shadow: 1px 1px 1px #333;
+}
+#pageTitle #DeltaPlaceHolderPageTitleInTitleArea{
+    margin-left: -150px;
+}
+#s4-titlerow{
+    display: none !important;
+}
+
+#s4-bodyContainer #contentRow{
+    margin-top:3px;
+}
+
+.absolute-centered{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    left:0;
+    margin-top: 10px;
+}
+
+.margin-left-150{
+    margin-left:150px;
+}
+
+ .padding-left-150{
+     padding-left:150px;
+ }
+
+.ribbon-middle-title{
+    color: white;
+    font-size: 19px;
+    text-shadow: 1px 1px 1px #333;
+}
+.ribbon-middle-caption{
+    color: #ddd;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.ribbon-middle-container{
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.ribbon-favorites{
+    float: right;
+    display: table;
+    height: 100%;
+}
+
+.ribbon-favorites .ms-tableCell{
+    vertical-align: middle;
+}
+.fa-star.favorite-button{
+    height: 30px;
+    line-height: 18px;
+}
+ .fa-star.favorite-button:hover{
+    color:yellow !important;
+    cursor: pointer;
+ }
+.favorite-button{
+    border:#3F3F3F 3px solid;
+    background-color: #333;
+    color:#CCC;
+    transition: all 0.3s;
+    padding: 3px 7px !important;
+}
+
+.favorite-button:hover{
+    border:#3F3F3F 3px solid;
+    background-color: #222;
+    color:white;
+    transition: all 0.3s;
+    
+}
+.vertical-center{
+    vertical-align: middle;
+}
+.breadcrumb-cell{
+    height: auto !important;;
+    height: initial !important;
+}
+
+#sideNavBox li.static>ul li > a.ms-core-listMenu-item{
+    padding:6px 12px;
+}
+
+li > a.ms-core-listMenu-item{
+    transition: background 0.3s;
+}
+#sideNavBox li > a.ms-core-listMenu-item:hover{
+    background:#5394E4 !important;
+    box-shadow: 1px 1px 1px;
+    transition: background 0.3s;
+}
+
+#sideNavBox ul.dynamic{
+    min-width: 200px !important;
+}
+
+#zz10_RootAspMenu,
+#zz11_RootAspMenu{
+    margin-left: 5px;
+  
+}
+
+#zz10_RootAspMenu .menu-item-text,
+#zz11_RootAspMenu .menu-item-text{
+    color:#5F5D60 !important;
+}
+
+#zz10_RootAspMenu ul li,
+#zz11_RootAspMenu ul li{
+    border-left:1px solid #bbb;
+    border-right:1px solid #bbb;
+    padding-left:15px;
+    padding-right: 15px;
+}  
+
+#zz10_RootAspMenu ul,
+#zz11_RootAspMenu ul{
+    padding-left: 0;
+}
+
+#zz10_RootAspMenu ul a,
+#zz11_RootAspMenu ul a{
+    text-align: center;
+    margin-right: 0;
+}
+#zz10_RootAspMenu>li>a:first-child,
+#zz11_RootAspMenu>li>a:first-child{
+    display: none;
+}
+
+#main-table{
+   background-color:#DBDBDB;
+   border:none;
+}
+
+
+#main-table td{
+    border:none;
+}
+/***** NEW MASTER PAGE STYLES END*/
+
+.well{
+    padding:18px;
+}
+
+.container-full{
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width:1290px){
+    .main-top-links-caption-col{
+        display: none;
+    }
+}
+
+.ms-dlgCloseBtn span,
+#fullscreenmodebox span{
+    box-sizing: initial !important;
+}
+
+
+/*LEFT NAVIGATION ICONS*/
+#sideNavBox #zz13_RootAspMenu>li>.menu-item:before{
+    content: "\f1fa";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+    font-size: 17px;
+    color:#444;
+}
+
+
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='/SitePages/Home.aspx']:before{
+    content: "\f015";
+}
+
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='/cip']:before{
+    content: "\f201";
+}
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='/CAU/Pages/unit_home.aspx']:before{
+    content: "\f0f3";
+}
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='file:\\fphqit\IMU\MediaOne Intelligence\index.htm']:before{
+    content: "\f1e5";
+}
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='http://mediaoneb/mediaone_new/ning_whats_new/software_application.aspx']:before{
+    content: "\f1c0";
+}
+
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='http://mediaone/mediaone_new/unit/index.aspx?ID=204']:before{
+    content: "\f1b8";    
+}
+/*--------------*/
+.icon-versaterm:before{
+    content: "\f27d" !important;
+}
+
+.icon-knowledge:before{
+    content: "\f19d" !important;
+}
+
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='/CrimeAnalysis/Pages/unit_home.aspx']:before{
+    content: "\f002";    
+}
+
+#sideNavBox #zz13_RootAspMenu>li>.menu-item[href='http://mediaoneb/intel_transfer.asp']:before{
+    content: "\f1e5";    
+}
+
+.uib-left:before{
+    content: "\f060";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+    font-size: 13px;
+    color:#444;
+}
+
+.uib-right:before{
+    content: "\f061";
+    font-family: "FontAwesome";
+    padding-right: 5px;
+    font-size: 13px;
+    color:#444;
+}
+
+.icon-business:before{
+    content: "\f0b1" !important;
+}
+
+.icon-project:before{
+    content: "\f277" !important;
+}
+
+.icon-crime:before{
+    content: "\f24e" !important;
+}
+
+.icon-employee:before{
+    content: "\f007" !important;
+}
+
+.icon-indicator:before{
+    content: "\f080" !important;
+}
+
+.icon-operation:before{
+    content: "\f013" !important;
+}
+
+.icon-videos:before{
+    content: "\f03d" !important;
+}
+
+.icon-organization:before{
+    content: "\f1ad" !important;
+}
+
+
+.icon-software:before{
+    content: "\f1c0" !important;
+}
+
+.icon-documents:before{
+    content: "\f02d" !important;
+}
+
+.icon-library:before{
+    content: "\f03a" !important;
+}
+
+.icon-photo:before{
+    content: "\f03e" !important;
+}
+
+.icon-faq:before{
+    content: "\f29c" !important;
+}
+
+.icon-member:before{
+    content: "\f0c0" !important;
+}

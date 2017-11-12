@@ -1,0 +1,171 @@
+<style>
+    .clear:before,
+    .clear:after {
+        content: " ";
+        display: table;
+    }
+    
+    .clear:after {
+        clear: both;
+    }
+    
+    .clear {
+        *zoom: 1;
+    }
+    
+    .none {
+        display: none;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .tabs {
+        margin-top:5px;
+        margin-left: -26px;   
+        margin-bottom: 0;        
+    }
+    
+    .tabs li>span {
+        text-align: center;
+    }
+    
+    .tabs li,
+    .tabs li:before {
+        cursor: default;
+        z-index: 1;
+        position: relative;
+        border: 1px solid #aaa;
+        border-bottom: 0;
+        transform: skewX(25deg);
+        float: left;
+        height: 29px;
+        margin: 0 0 0 12px;
+        padding: 0 15px;
+        width: 171px;
+        border-radius: 5px 5px 0 0;
+        box-shadow: inset -1px 1px 0 rgba(255, 255, 255, .5);
+        /*transition: background-color 0.6s;*/
+    }
+    
+    .tabs li:hover,
+    .tabs li:hover:before {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5394e4+0,337ab7+76,337ab7+94,337ab7+100 */
+        background: linear-gradient(to bottom,  #5394e4 0%,#337ab7 76%,#337ab7 94%,#337ab7 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+    
+    .tabs li:nth-child(1),
+    .tabs li:nth-child(1):before,
+    .tabs li:nth-child(5),
+    .tabs li:nth-child(5):before {
+        background: #f0ad4e;
+        background:rgba(240,173,78,0.9);
+    }
+    
+    .tabs li:nth-child(2),
+    .tabs li:nth-child(2):before,
+    .tabs li:nth-child(6),
+    .tabs li:nth-child(6):before {
+        /*background: #FFC85A;*/
+        background: #337ab7;
+    }
+    
+    .tabs li:nth-child(3),
+    .tabs li:nth-child(3):before,
+    .tabs li:nth-child(7),
+    .tabs li:nth-child(7):before {
+        background: #FB7955
+    }
+    
+.tabs li:nth-child(4),
+    .tabs li:nth-child(4):before,
+    .tabs li:nth-child(8),
+    .tabs li:nth-child(8):before {
+        background: #5EA4F9
+    }
+    
+    
+    .tabs li:nth-child(1) {
+        z-index: 7
+    }
+    
+    .tabs li:nth-child(2) {
+        z-index: 6
+    }
+    
+    .tabs li:nth-child(3) {
+        z-index: 5
+    }
+    
+    .tabs li:nth-child(4) {
+        z-index: 4
+    }
+    
+    .tabs li:nth-child(5) {
+        z-index: 3
+    }
+    
+    .tabs li:nth-child(6) {
+        z-index: 2
+    }
+    
+    .tabs li:nth-child(7) {
+        z-index: 1
+    }
+    .tabs li:nth-child(8) {
+        z-index: 0
+    }
+    
+    .tabs li:before {
+        content: '';
+        position: absolute;
+        left: -18px;
+        top: -1px;
+        transform: skewX(140deg);
+        border-right: 0;
+        margin: 0;
+        padding: 0;
+        width: 30px;
+        border-radius: 5px 0 0 0;
+        box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .5);
+    }
+    
+    .tabs li img {
+        z-index: 9;
+        position: absolute;
+        left: -6px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        transform: skewX(-25deg);
+        border-radius: 3px;
+    }
+    
+    .tabs li a {
+        color: white;
+        display: inline-block;
+        text-align: center;
+        padding-top: 5px;
+        width: 100%;
+    }
+    
+    .tabs li span {
+        transform: skewX(-25deg);
+        width: 98%;
+        display: block;
+    } 
+ 
+</style>
+<ul class="tabs">
+    <li class=""><span><a href="http://mediaone/e_parade/index.asp">E-Transfer</a></span></li>
+    <li class=""><span><a href="http://lms.cpkn.ca/DEMO">E-Learning</a></span></li>
+    <li class=""><span><a href="http://mediaone/officer_activity/index.aspx">E-LMPV's Page</a></span></li>
+    <li class=""><span><a href="http://mediaone/directive_new/claim.aspx">Directives</a></span></li>
+    <li class=""><span><a href="http://172.21.10.69/CARM/FWWPLogin.aspx">D.A.M.M.</a></span></li>
+    <li class=""><span><a href="http://mediaone/pay_duty_system/index.asp">Pay Day</a></span></li>
+    <li class=""><span><a href="http://mediaone/dravis_app/index.asp">CRAVIS</a></span></li>
+    <li class=""><span><a href="http://mediaone/OPPlanningCalendar/main.aspx">Operational Calendar</a></span></li>
+    
+</ul>
+

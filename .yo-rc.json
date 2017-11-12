@@ -1,0 +1,10 @@
+{
+  "generator-sppp": {
+    "app.name": "custom-home",
+    "sppp.version": "2.1.8",
+    "app.description": "",
+    "app.author": "",
+    "conf.spFolder": "_catalogs/masterpage",
+    "conf.distFolder": "./dist"
+  }
+}

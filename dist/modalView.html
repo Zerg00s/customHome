@@ -1,0 +1,27 @@
+﻿<style>
+    .modal-content,
+    .modal-dialog {
+        min-width: 800px !important;
+    }
+</style>
+<div class="panel panel-primary" style="margin-bottom: 0; min-width: 800px">
+    <div class="panel-body" style="min-height: 300px; margin-bottom: 40px">
+        <h2>
+            {{modal.newsItem.Title}}            
+        </h2>
+        <div style="position: absolute; top:15px;right:15px;font-size: 25px;cursor:pointer">
+            <i class="fa fa-times" ng-click="modal.cancel()"></i>
+        </div>
+
+        <div ng-bind-html="modal.newsItem.DetailedText"></div>
+
+        <div ng-show="modal.canEditNews">
+            <a ng-href="{{'../Lists/BannerItem/EditForm.aspx?ID='+modal.newsItem.ID}}" target="_blank">
+                <i class="fa fa-cog"></i> Modify this item
+            </a>
+        </div>
+        <!--<div style="position: absolute; bottom:15px">
+            <button type="button" ng-click="modal.cancel()" class="btn btn-default">Close</button>
+        </div>-->
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<style> 
+#idAttachmentsRow{
+    border:solid 1px #bbb;
+    margin-bottom: 10px;
+}
+
+#idAttachmentsRow>td{
+    padding:10px;
+}
+
+.ms-formtoolbar{
+    margin-top:10px;
+}
+
+#SPFieldText{
+    font-size: 20px;
+    text-align: center;
+}
+#SPFieldNote{
+    padding:10px;
+    width:100%;
+    
+}
+#SPFieldNote>div{
+    min-height: 200px;
+}
+
+.ms-formbody{
+    min-width: 700px;
+}
+</style>
+
+<script>
+
+jQuery(function(){
+    jQuery("[name='SPBookmark_Title']").parent().parent().hide();
+    jQuery("[name='SPBookmark__ModerationStatus']").parent().parent().hide();
+    jQuery("[name='SPBookmark__x0066_et0']").parent().parent().parent().hide();
+    jQuery("[name='SPBookmark_Topic']").parent().parent().parent().hide();
+    jQuery("[name='SPBookmark_Expires']").parent().parent().parent().hide();
+    jQuery("[name='SPBookmark_Body']").parent().parent().hide();
+    jQuery(".ms-descriptiontext:contains('Intranet Announcement')").hide();
+});
+
+
+</script>

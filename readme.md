@@ -47,6 +47,6 @@ To start watching local changes type:
 gulp watch
 ```
 
-Now, any time you make any changes in the distr or src folder - the file will be automatically uploaded to SharePoint
+Now, any time you make any changes in the `\distr` or `\src` folder - the file will be automatically uploaded to SharePoint
 
 ---
